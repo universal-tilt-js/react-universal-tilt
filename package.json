@@ -1,0 +1,27 @@
+{
+  "name": "react-universal-tilt",
+  "version": "1.0.0-beta.1",
+  "description": "universal-tilt.js implementation for React.js component",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JB1905/react-universal-tilt.git"
+  },
+  "keywords": [
+    "React",
+    "ES6",
+    "tilt"
+  ],
+  "author": "Jakub Biesiada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JB1905/react-universal-tilt/issues"
+  },
+  "homepage": "https://github.com/JB1905/react-universal-tilt#readme",
+  "dependencies": {
+    "universal-tilt.js": "1.0.6"
+  },
+  "peerDependencies": {
+    "react": "16.x.x"
+  }
+}
