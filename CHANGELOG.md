@@ -1,6 +1,6 @@
 # react-universal-tilt Changelog
 
-## 1.0.1 / 1.0.2 (2018-07-13)
+## 1.0.1 / 1.0.2 / 1.0.3 (2018-07-13)
 #### Bug Fix
 - the incompatibility problem has been fixed
 - previous versions are deprecated
