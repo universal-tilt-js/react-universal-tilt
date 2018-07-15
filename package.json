@@ -1,6 +1,6 @@
 {
   "name": "react-universal-tilt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "universal-tilt.js implementation for React.js component",
   "main": "./lib/react-universal-tilt.min.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/JB1905/react-universal-tilt#readme",
   "dependencies": {
-    "universal-tilt.js": "1.0.7"
+    "universal-tilt.js": "1.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.53",
