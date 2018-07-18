@@ -13,10 +13,10 @@
   },
   "keywords": [
     "React",
-    "ES6",
+    "component",
     "tilt",
     "parallax",
-    "move",
+    "movement",
     "gyroscope"
   ],
   "author": "Jakub Biesiada",
@@ -29,16 +29,16 @@
     "universal-tilt.js": "1.1.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.53",
-    "@babel/core": "^7.0.0-beta.53",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.53",
-    "@babel/preset-env": "^7.0.0-beta.53",
-    "@babel/preset-react": "^7.0.0-beta.53",
-    "@babel/register": "^7.0.0-beta.53",
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0-beta.54",
+    "@babel/register": "^7.0.0-beta.54",
     "babel-loader": "^8.0.0-beta.4",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "webpack": "^4.16.0",
-    "webpack-cli": "^3.0.8",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
     "yargs": "^12.0.1"
   },
   "peerDependencies": {
