@@ -1,7 +1,7 @@
 # [react-universal-tilt](https://github.com/jb1905/react-universal-tilt)
 
 [![NPM version](http://img.shields.io/npm/v/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
-[![NPM downloads](http://img.shields.io/npm/dm/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tiltx)
+[![NPM downloads](http://img.shields.io/npm/dm/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 
 #### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React.js component
 ## Demo
