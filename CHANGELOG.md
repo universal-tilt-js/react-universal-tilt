@@ -1,5 +1,15 @@
 # react-universal-tilt Changelog
 
+## 1.0.5 (2018-08-28)
+#### Documentation
+- added examples section in README.md
+
+#### Dependencies
+- updated Babel to `^7.0.0` stable
+- updated babel-plugin-add-module-exports to `^0.3.3`
+- updated Webpack to `^4.17.1`
+- updated babel-loader to `^8.0.0`
+
 ## 1.0.4 (2018-07-16)
 #### Dependencies
 - updated universal-tilt.js to v1.1.0 (resolved bug with React.js build)
