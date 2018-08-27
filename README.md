@@ -53,5 +53,68 @@ Name | Type | Default | Description | Available options
 ## Event
 `tiltChange` event will output the x & y of tilting
 
+## Examples
+```js
+import React, { Component } from 'react';
+import ReactTilt from 'react-universal-tilt';
+
+/* ------ First Example ------ */
+
+export class FirstExample extends Component {
+  render() {
+    return (
+      <ReactTilt
+        options={{
+          'position-base': 'window',
+          reverse: true
+        }}
+
+        style={{
+          'border': '1px solid #333'
+        }}
+
+        className="tilt-elem my-tilt"
+      />
+    );
+  }
+}
+
+/* ------ Second Example ------ */
+
+function myFunc(el) {
+  el.style.backgroundColor = '#f00';
+}
+
+export class SecondExample extends Component {
+  output(e) {
+    console.log(e.tiltX, e.tiltY, e.angle);
+  }
+
+  render() {
+    const style = {
+      'border': '1px solid #333'
+    };
+
+    return (
+      <ReactTilt
+        options={{
+          speed: 500,
+          scale: 1.3,
+          onMouseMove: el => myFunc(el)
+        }}
+
+        style={style}
+
+        className="tilt-elem my-tilt"
+
+        tiltChange={this.output}
+      >
+        <h3>Hello World!</h3>
+      </ReactTilt>
+    );
+  }
+}
+```
+
 ## License
 This project is licensed under the MIT License © 2018-present Jakub Biesiada
