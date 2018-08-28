@@ -51,7 +51,7 @@ Name | Type | Default | Description | Available options
 **className** | string | `tilt` | Tilt element class name | Name of tilt element
 
 ## Event
-`tiltChange` event will output the x & y of tilting
+`tiltChange` event will output the x, y & angle of tilting
 
 ## Examples
 ```js
