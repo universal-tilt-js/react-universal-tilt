@@ -1,5 +1,12 @@
 # react-universal-tilt Changelog
 
+## Unreleased
+#### Breaking Changes
+- dropped support for React `< 16.3.0`
+
+#### Internal
+- updated ref to React Ref API
+
 ## 1.0.5 (2018-08-28)
 #### Documentation
 - added examples section in README.md
@@ -8,7 +15,7 @@
 - updated Babel to `^7.0.0` stable
 - updated babel-plugin-add-module-exports to `^0.3.3`
 - updated Webpack to `^4.17.1`
-- updated babel-loader to `^8.0.0`
+- updated babel-loader to `^8.0.0` stable
 
 ## 1.0.4 (2018-07-16)
 #### Dependencies
