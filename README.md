@@ -3,7 +3,7 @@
 [![NPM version](http://img.shields.io/npm/v/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 [![NPM downloads](http://img.shields.io/npm/dm/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 
-#### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React.js component
+#### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React component
 ## Demo
 **[See plugin in action](https://jb1905.github.io/universal-tilt.js/)**
 
@@ -15,7 +15,7 @@ $ yarn add react-universal-tilt
 ```
 
 ## Getting Started
-**• Import plugin in React.js application file:**
+**• Import plugin in React application file:**
 ```js
 import ReactTilt from 'react-universal-tilt';
 ```
