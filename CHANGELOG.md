@@ -22,7 +22,7 @@
 
 ## 1.0.4 (2018-07-16)
 #### Dependencies
-- updated universal-tilt.js to v1.1.0 (resolved bug with React.js build)
+- updated universal-tilt.js to v1.1.0 (resolved bug with React build)
 
 ## 1.0.1 / 1.0.2 / 1.0.3 (2018-07-13)
 #### Bug Fix
