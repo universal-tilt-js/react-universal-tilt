@@ -4,18 +4,20 @@ const env = require('yargs').argv.env;
 
 let libraryName = 'react-universal-tilt';
 
-let outputFile, mode;
+let outputFile, mode, devtool;
 
 if (env === 'build') {
   mode = 'production';
   outputFile = libraryName + '.min.js';
+  devtool = false;
 } else {
   mode = 'development';
   outputFile = libraryName + '.js';
+  devtool = 'source-map';
 }
 
 const config = {
-  mode: mode,
+  mode,
   entry: __dirname + '/src/index.js',
   externals: {
     react: {
@@ -31,7 +33,7 @@ const config = {
       amd: 'universal-tilt.js'
     }
   },
-  devtool: 'source-map',
+  devtool,
   output: {
     path: __dirname + '/lib',
     filename: outputFile,

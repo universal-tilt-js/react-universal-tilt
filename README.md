@@ -15,7 +15,7 @@ $ yarn add react-universal-tilt
 ```
 
 ## Getting Started
-**• Import plugin in React.js application file:**
+**• Import plugin in React application file:**
 ```js
 import ReactTilt from 'react-universal-tilt';
 ```

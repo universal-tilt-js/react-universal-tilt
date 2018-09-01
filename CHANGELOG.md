@@ -1,11 +1,14 @@
 # react-universal-tilt Changelog
 
-## Unreleased
+## 1.0.6 (2018-09-01)
 #### Breaking Changes
 - dropped support for React `< 16.3.0`
 
 #### Internal
 - updated ref to React Refs API
+
+#### Repository Changes
+- removed map for production version
 
 ## 1.0.5 (2018-08-28)
 #### Documentation

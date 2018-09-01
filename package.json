@@ -1,6 +1,6 @@
 {
   "name": "react-universal-tilt",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "universal-tilt.js implementation for React.js component",
   "main": "./lib/react-universal-tilt.min.js",
   "scripts": {
