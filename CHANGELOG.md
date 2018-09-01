@@ -5,7 +5,7 @@
 - dropped support for React `< 16.3.0`
 
 #### Internal
-- updated ref to React Ref API
+- updated ref to React Refs API
 
 ## 1.0.5 (2018-08-28)
 #### Documentation
