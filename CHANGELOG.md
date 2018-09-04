@@ -1,5 +1,9 @@
 # react-universal-tilt Changelog
 
+## 1.0.7 (2018-09-04)
+#### Dependencies
+- updated universal-tilt.js to `^1.1.1`
+
 ## 1.0.6 (2018-09-01)
 #### Breaking Changes
 - dropped support for React `< 16.3.0`
