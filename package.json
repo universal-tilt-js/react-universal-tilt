@@ -29,17 +29,17 @@
     "universal-tilt.js": "^1.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "babel-plugin-add-module-exports": "^0.3.3",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0",
-    "yargs": "^12.0.1"
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "yargs": "^12.0.2"
   },
   "peerDependencies": {
     "react": ">= 16.3.0"
