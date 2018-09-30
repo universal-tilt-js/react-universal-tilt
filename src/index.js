@@ -9,23 +9,20 @@ export default class ReactTilt extends Component {
   }
 
   componentDidMount() {
-    const { options } = this.props;
+    const { options, tiltChange } = this.props;
     const tilt = new UniversalTilt(this.el.current, options);
 
-    if (this.props.tiltChange) {
-      this.el.current.addEventListener('tiltChange', this.output);
-    }
+    if (tiltChange) this.el.current.addEventListener('tiltChange', this.output);
   }
 
   output = e => this.props.tiltChange(e.detail);
 
   render() {
+    const { className, style, children } = this.props;
+
     return (
-      <div
-        className={this.props.className || 'tilt'}
-        style={this.props.style}
-        ref={this.el}>
-        {this.props.children}
+      <div className={className || 'tilt'} style={style} ref={this.el}>
+        {children}
       </div>
     );
   }

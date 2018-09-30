@@ -1,7 +1,7 @@
 {
   "name": "react-universal-tilt",
   "version": "1.0.8",
-  "description": "universal-tilt.js implementation for React.js component",
+  "description": "universal-tilt.js implementation for React component",
   "main": "./lib/react-universal-tilt.min.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build",
@@ -38,7 +38,7 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-add-module-exports": "^1.0.0",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1",
+    "webpack-cli": "^3.1.2",
     "yargs": "^12.0.2"
   },
   "peerDependencies": {
