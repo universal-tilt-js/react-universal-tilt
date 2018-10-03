@@ -1,6 +1,6 @@
 # react-universal-tilt Changelog
 
-## 1.0.9 (2018-09-30)
+## 1.0.9 / 1.0.10 (2018-09-30)
 #### Internal
 - cleaned up
 
