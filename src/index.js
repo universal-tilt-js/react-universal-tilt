@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import UniversalTilt from 'universal-tilt.js';
 
 export default class ReactTilt extends Component {
-  constructor() {
-    super();
-
-    this.el = React.createRef();
-  }
+  el = React.createRef();
 
   componentDidMount() {
     const { options, tiltChange } = this.props;
@@ -18,10 +14,10 @@ export default class ReactTilt extends Component {
   output = e => this.props.tiltChange(e.detail);
 
   render() {
-    const { className, style, children } = this.props;
+    const { className = 'tilt', style, children } = this.props;
 
     return (
-      <div className={className || 'tilt'} style={style} ref={this.el}>
+      <div className={className} style={style} ref={this.el}>
         {children}
       </div>
     );
