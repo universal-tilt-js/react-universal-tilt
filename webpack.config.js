@@ -39,7 +39,8 @@ const config = {
     filename: outputFile,
     library: 'ReactTilt',
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    globalObject: 'global'
   },
   module: {
     rules: [
