@@ -1,5 +1,9 @@
 # react-universal-tilt Changelog
 
+## 1.1.3 (2018-11-11)
+#### Bug Fix
+- fixed bug with `window` global variable in Node.js
+
 ## 1.1.2 (2018-11-01)
 #### Internal
 - cleaned up
