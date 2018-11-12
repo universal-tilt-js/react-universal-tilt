@@ -1,5 +1,9 @@
 # react-universal-tilt Changelog
 
+## 1.1.4 (2018-11-12)
+#### Improvement
+- set style option as empty object when `style` props are undefined
+
 ## 1.1.3 (2018-11-11)
 #### Bug Fix
 - fixed bug with `window` global variable in Node.js
