@@ -1,3 +1,8 @@
 src
+
 .babelrc
+.travis.yml
+.prettierrc
+
+.eslintrc.js
 webpack.config.js

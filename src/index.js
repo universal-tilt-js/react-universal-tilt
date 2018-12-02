@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import UniversalTilt from 'universal-tilt.js';
 
 export default class ReactTilt extends Component {
@@ -23,3 +24,11 @@ export default class ReactTilt extends Component {
     );
   }
 }
+
+ReactTilt.propTypes = {
+  options: PropTypes.node,
+  tiltChange: PropTypes.func,
+  className: PropTypes.string,
+  style: PropTypes.node,
+  children: PropTypes.node
+};
