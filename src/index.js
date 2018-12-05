@@ -7,10 +7,12 @@ export default class ReactTilt extends Component {
 
   componentDidMount() {
     const { options, tiltChange } = this.props;
-    const tilt = new UniversalTilt(this.el.current, options);
+    UniversalTilt.init(this.el.current, options);
 
     if (tiltChange) this.el.current.addEventListener('tiltChange', this.output);
   }
+
+  componentWillUnmount = () => this.el.current.univesalTilt.destroy();
 
   output = e => this.props.tiltChange(e.detail);
 

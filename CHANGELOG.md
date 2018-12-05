@@ -1,5 +1,17 @@
 # react-universal-tilt Changelog
 
+## 1.2.0 (Soon)
+#### Internal
+- added universal-tilt.js `destroy()` method call on `componentWillUnmount()`
+
+#### Dependencies
+- updated universal-tilt.js to v2.0.0
+
+#### Repository Changes
+- added Travis CI config
+- added Prettier config
+- added ESLint config
+
 ## 1.1.4 (2018-11-12)
 #### Improvement
 - set style option as empty object when `style` props are undefined
