@@ -5,6 +5,11 @@
   ],
   "plugins": [
     "babel-plugin-add-module-exports",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    ["transform-react-remove-prop-types",
+      {
+        "removeImport": true
+      }
+    ]
   ]
 }
