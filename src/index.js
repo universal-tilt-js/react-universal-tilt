@@ -28,9 +28,9 @@ export default class ReactTilt extends Component {
 }
 
 ReactTilt.propTypes = {
-  options: PropTypes.node,
+  options: PropTypes.object,
   tiltChange: PropTypes.func,
   className: PropTypes.string,
-  style: PropTypes.node,
+  style: PropTypes.object,
   children: PropTypes.node
 };
