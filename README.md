@@ -40,7 +40,7 @@ You can add components with or without additional content:
 ```
 *without:*
 ```js
-<ReactTilt /* options *//>
+<ReactTilt /* options */ />
 ```
 
 ## Props
