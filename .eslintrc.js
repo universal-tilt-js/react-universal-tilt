@@ -1,7 +1,7 @@
 module.exports = {
   parser: 'babel-eslint',
   extends: [
-    'airbnb-base',
+    'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended'
   ],
@@ -13,8 +13,5 @@ module.exports = {
     react: {
       version: require('./package.json').devDependencies.react
     }
-  },
-  rules: {
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
   }
 };

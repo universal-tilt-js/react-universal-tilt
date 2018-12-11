@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
-    "lint": "eslint ./src --fix"
+    "lint": "eslint ./src --fix",
+    "prettier": "prettier --write 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,6 @@
     "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
     "eslint": "^5.10.0",
-    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
