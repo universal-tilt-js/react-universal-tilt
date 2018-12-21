@@ -1,5 +1,3 @@
-const webpack = require('webpack');
-const path = require('path');
 const env = require('yargs').argv.env;
 
 const libraryName = 'react-universal-tilt';
@@ -52,10 +50,6 @@ const config = {
         }
       }
     ]
-  },
-  resolve: {
-    modules: [path.resolve('./node_modules'), path.resolve('./src')],
-    extensions: ['.json', '.js']
   }
 };
 
