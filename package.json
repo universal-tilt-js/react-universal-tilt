@@ -4,8 +4,11 @@
   "description": "universal-tilt.js implementation for React component",
   "main": "./lib/react-universal-tilt.min.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build",
-    "dev": "webpack --progress --colors --watch --env dev",
+    "release": "npm run prettier && npm run lint && npm run build:dev && npm run build",
+    "build": "webpack --env build",
+    "build:dev": "webpack --env dev",
+    "watch": "npm run build -- --watch",
+    "watch:dev": "npm run build:dev -- --watch",
     "lint": "eslint ./src --fix",
     "prettier": "prettier --write 'src/**/*.js'"
   },
