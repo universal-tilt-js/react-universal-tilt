@@ -17,7 +17,7 @@ export default class ReactTilt extends Component {
   output = e => this.props.tiltChange(e.detail);
 
   render() {
-    const { className = 'tilt', style = {}, children } = this.props;
+    const { className, style, children } = this.props;
 
     return (
       <div className={className} style={style} ref={this.el}>
@@ -28,9 +28,15 @@ export default class ReactTilt extends Component {
 }
 
 ReactTilt.propTypes = {
-  options: PropTypes.object,
+  settings: PropTypes.object,
+  methods: PropTypes.object,
   tiltChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
   children: PropTypes.node
+};
+
+ReactTilt.defaultProps = {
+  className: 'tilt',
+  style: {}
 };
