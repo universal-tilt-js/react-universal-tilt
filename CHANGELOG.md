@@ -1,5 +1,18 @@
 # react-universal-tilt Changelog
 
+## 1.2.0 beta 2 (Soon)
+#### Breaking Changes
+- splitted `options` prop into `settings` and `methods`
+
+#### Repository Changes
+- updated npm scripts
+- cleaned up Webpack config
+- removed unused dependencies
+- updated ESLint config
+
+#### Internal
+- updated default props config
+
 ## 1.2.0 beta 1 (2018-12-10)
 #### Internal
 - added universal-tilt.js `destroy()` method call on `componentWillUnmount()`

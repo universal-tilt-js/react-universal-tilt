@@ -23,7 +23,8 @@ import ReactTilt from 'react-universal-tilt';
 **• Later create parallax component and pass options:**
 ```js
 <ReactTilt
-  options={ /* options */ }
+  settings={ /* settings */ }
+  methods={ /* methods */ }
   styles={ /* CSS styles */ }
   className={ /* class name(s) */ }
   tiltChange={ /* event output destination */ }
@@ -46,7 +47,8 @@ You can add components with or without additional content:
 ## Props
 Name | Type | Default | Description | Available options
 -|-|-|-|-
-**options** | object | `{}` | [Default universal-tilt.js options](https://github.com/JB1905/universal-tilt.js#options) | [universal-tilt.js options](https://github.com/JB1905/universal-tilt.js#options)
+**settings** | object | `{}` | [Default universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings)
+**methods** | object | `{}` | [Default universal-tilt.js methods](https://github.com/JB1905/universal-tilt.js#methods) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#methods)
 **style** | object | `{}` | CSS styles for tilt element | CSS styles
 **className** | string | `tilt` | Tilt element class name | Name of tilt element
 
@@ -64,8 +66,8 @@ export class FirstExample extends Component {
   render() {
     return (
       <ReactTilt
-        options={{
-          'position-base': 'window',
+        settings={{
+          base: 'window',
           reverse: true
         }}
 
@@ -97,9 +99,12 @@ export class SecondExample extends Component {
 
     return (
       <ReactTilt
-        options={{
+        settings={{
           speed: 500,
-          scale: 1.3,
+          scale: 1.3
+        }}
+
+        methods={{
           onMouseMove: el => myFunc(el)
         }}
 
