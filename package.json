@@ -2,6 +2,8 @@
   "name": "react-universal-tilt",
   "version": "1.2.0-beta.2",
   "description": "universal-tilt.js implementation for React component",
+  "author": "Jakub Biesiada",
+  "license": "MIT",
   "main": "./lib/react-universal-tilt.min.js",
   "scripts": {
     "release": "npm run prettier && npm run lint && npm run build:dev && npm run build",
@@ -24,8 +26,6 @@
     "movement",
     "gyroscope"
   ],
-  "author": "Jakub Biesiada",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JB1905/react-universal-tilt/issues"
   },
