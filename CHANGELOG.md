@@ -1,6 +1,6 @@
 # react-universal-tilt Changelog
 
-## 1.2.0 beta 2 (Soon)
+## 1.2.0 beta 2 (2019-01-18)
 #### Breaking Changes
 - splitted `options` prop into `settings` and `methods`
 
