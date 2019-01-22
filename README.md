@@ -8,9 +8,13 @@
 **[See plugin in action](https://jb1905.github.io/universal-tilt.js/)**
 
 ## How to Use
-**• Install plugin via favourite package manager:**
+At the beginning install the library in your project via npm:
 ```sh
 $ npm install react-universal-tilt
+```
+
+Or Yarn:
+```sh
 $ yarn add react-universal-tilt
 ```
 
