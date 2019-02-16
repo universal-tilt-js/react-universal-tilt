@@ -28,7 +28,7 @@ import ReactTilt from 'react-universal-tilt';
 ```js
 <ReactTilt
   settings={ /* settings */ }
-  methods={ /* methods */ }
+  callbacks={ /* callbacks */ }
   styles={ /* CSS styles */ }
   className={ /* class name(s) */ }
   tiltChange={ /* event output destination */ }
@@ -52,7 +52,7 @@ You can add components with or without additional content:
 Name | Type | Default | Description | Available options
 -|-|-|-|-
 **settings** | object | `{}` | [Default universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings)
-**methods** | object | `{}` | [Default universal-tilt.js methods](https://github.com/JB1905/universal-tilt.js#methods) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#methods)
+**callbacks** | object | `{}` | [Default universal-tilt.js callbacks](https://github.com/JB1905/universal-tilt.js#callbacks) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#callbacks)
 **style** | object | `{}` | CSS styles for tilt element | CSS styles
 **className** | string | `tilt` | Tilt element class name | Name of tilt element
 
@@ -108,7 +108,7 @@ export class SecondExample extends Component {
           scale: 1.3
         }}
 
-        methods={{
+        callbacks={{
           onMouseMove: el => myFunc(el)
         }}
 

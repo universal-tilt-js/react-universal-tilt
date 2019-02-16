@@ -6,8 +6,8 @@ export default class ReactTilt extends Component {
   el = React.createRef();
 
   componentDidMount() {
-    const { methods, settings, tiltChange } = this.props;
-    UniversalTilt.init({ elements: this.el.current, methods, settings });
+    const { settings, callbacks, tiltChange } = this.props;
+    UniversalTilt.init({ elements: this.el.current, settings, callbacks });
 
     if (tiltChange) this.el.current.addEventListener('tiltChange', this.output);
   }
@@ -29,7 +29,7 @@ export default class ReactTilt extends Component {
 
 ReactTilt.propTypes = {
   settings: PropTypes.object,
-  methods: PropTypes.object,
+  callbacks: PropTypes.object,
   tiltChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
