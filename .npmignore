@@ -6,3 +6,4 @@ src
 
 .eslintrc.js
 webpack.config.js
+yarn-error.log

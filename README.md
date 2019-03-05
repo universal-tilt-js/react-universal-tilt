@@ -8,9 +8,13 @@
 **[See plugin in action](https://jb1905.github.io/universal-tilt.js/)**
 
 ## How to Use
-**• Install plugin via favourite package manager:**
+First, install the library in your project by npm:
 ```sh
 $ npm install react-universal-tilt
+```
+
+Or Yarn:
+```sh
 $ yarn add react-universal-tilt
 ```
 
@@ -23,7 +27,8 @@ import ReactTilt from 'react-universal-tilt';
 **• Later create parallax component and pass options:**
 ```js
 <ReactTilt
-  options={ /* options */ }
+  settings={ /* settings */ }
+  callbacks={ /* callbacks */ }
   styles={ /* CSS styles */ }
   className={ /* class name(s) */ }
   tiltChange={ /* event output destination */ }
@@ -40,13 +45,14 @@ You can add components with or without additional content:
 ```
 *without:*
 ```js
-<ReactTilt /* options *//>
+<ReactTilt /* options */ />
 ```
 
 ## Props
 Name | Type | Default | Description | Available options
 -|-|-|-|-
-**options** | object | `{}` | [Default universal-tilt.js options](https://github.com/JB1905/universal-tilt.js#options) | [universal-tilt.js options](https://github.com/JB1905/universal-tilt.js#options)
+**settings** | object | `{}` | [Default universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings)
+**callbacks** | object | `{}` | [Default universal-tilt.js callbacks](https://github.com/JB1905/universal-tilt.js#callbacks) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#callbacks)
 **style** | object | `{}` | CSS styles for tilt element | CSS styles
 **className** | string | `tilt` | Tilt element class name | Name of tilt element
 
@@ -64,8 +70,8 @@ export class FirstExample extends Component {
   render() {
     return (
       <ReactTilt
-        options={{
-          'position-base': 'window',
+        settings={{
+          base: 'window',
           reverse: true
         }}
 
@@ -97,9 +103,12 @@ export class SecondExample extends Component {
 
     return (
       <ReactTilt
-        options={{
+        settings={{
           speed: 500,
-          scale: 1.3,
+          scale: 1.3
+        }}
+
+        callbacks={{
           onMouseMove: el => myFunc(el)
         }}
 

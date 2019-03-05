@@ -1,5 +1,40 @@
 # react-universal-tilt Changelog
 
+## 1.2.0 (2019-03-05)
+#### Repository Changes
+- updated dependencies
+
+#### Breaking Changes
+- renamed `methods` prop to `callbacks`
+
+## 1.2.0 beta 2 (2019-01-18)
+#### Breaking Changes
+- splitted `options` prop into `settings` and `methods`
+
+#### Repository Changes
+- updated npm scripts
+- cleaned up Webpack config
+- removed unused dependencies
+- updated ESLint config
+
+#### Internal
+- updated default props config
+
+## 1.2.0 beta 1 (2018-12-10)
+#### Internal
+- added universal-tilt.js `destroy()` method call on `componentWillUnmount()`
+
+#### Dependencies
+- updated universal-tilt.js to v2.0.0 beta 1
+
+#### Improvement
+- removed PropTypes from output files
+
+#### Repository Changes
+- added Travis CI config
+- added Prettier config
+- added ESLint config
+
 ## 1.1.4 (2018-11-12)
 #### Improvement
 - set style option as empty object when `style` props are undefined
