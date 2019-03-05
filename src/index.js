@@ -7,8 +7,8 @@ export default function ReactTilt({
   callbacks,
   tiltChange,
   className,
-  style,
-  children
+  children,
+  ...props
 }) {
   const el = useRef();
 
@@ -23,7 +23,7 @@ export default function ReactTilt({
   }, []);
 
   return (
-    <div className={className} style={style} ref={el}>
+    <div {...props} className={className} ref={el}>
       {children}
     </div>
   );
@@ -34,11 +34,10 @@ ReactTilt.propTypes = {
   callbacks: PropTypes.object,
   tiltChange: PropTypes.func,
   className: PropTypes.string,
-  style: PropTypes.object,
-  children: PropTypes.node
+  children: PropTypes.node,
+  props: PropTypes.object
 };
 
 ReactTilt.defaultProps = {
-  className: 'tilt',
-  style: {}
+  className: 'tilt'
 };

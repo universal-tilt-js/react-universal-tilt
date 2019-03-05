@@ -2,7 +2,7 @@
 
 ## 1.3.0 beta 1 (Soon)
 #### Internal
-- rewritter with React Hooks
+- rewritten with React Hooks
 
 #### Breaking Changes
 - dropped support for React < 16.8.0
