@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import UniversalTilt from 'universal-tilt.js';
 
-export default class ReactTilt extends Component {
-  el = React.createRef();
+export default function ReactTilt({
+  settings,
+  callbacks,
+  tiltChange,
+  className,
+  style,
+  children
+}) {
+  const el = useRef();
 
-  componentDidMount() {
-    const { settings, callbacks, tiltChange } = this.props;
-    UniversalTilt.init({ elements: this.el.current, settings, callbacks });
+  const output = e => tiltChange(e.detail);
 
-    if (tiltChange) this.el.current.addEventListener('tiltChange', this.output);
-  }
+  useEffect(() => {
+    UniversalTilt.init({ elements: el.current, settings, callbacks });
 
-  componentWillUnmount = () => this.el.current.univesalTilt.destroy();
+    if (tiltChange) el.current.addEventListener('tiltChange', output);
 
-  output = e => this.props.tiltChange(e.detail);
+    return () => el.current.univesalTilt.destroy();
+  }, []);
 
-  render() {
-    const { className, style, children } = this.props;
-
-    return (
-      <div className={className} style={style} ref={this.el}>
-        {children}
-      </div>
-    );
-  }
+  return (
+    <div className={className} style={style} ref={el}>
+      {children}
+    </div>
+  );
 }
 
 ReactTilt.propTypes = {
