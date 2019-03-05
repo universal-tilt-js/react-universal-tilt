@@ -1,5 +1,12 @@
 # react-universal-tilt Changelog
 
+## 1.2.0 (2019-03-05)
+#### Repository Changes
+- updated dependencies
+
+#### Breaking Changes
+- renamed `methods` prop to `callbacks`
+
 ## 1.2.0 beta 2 (2019-01-18)
 #### Breaking Changes
 - splitted `options` prop into `settings` and `methods`
