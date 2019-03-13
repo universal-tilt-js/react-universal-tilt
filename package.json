@@ -53,6 +53,6 @@
     "webpack-cli": "^3.2.3"
   },
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": ">=16.8.0"
   }
 }
