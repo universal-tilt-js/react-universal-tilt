@@ -17,9 +17,9 @@ export default function ReactTilt({
 
     UniversalTilt.init({ elements: current, settings, callbacks });
 
-    if (tiltChange) el.current.addEventListener('tiltChange', output);
-
     const output = e => tiltChange(e.detail);
+
+    if (tiltChange) el.current.addEventListener('tiltChange', output);
 
     return () => current.univesalTilt.destroy();
   }, [callbacks, settings, tiltChange]);
