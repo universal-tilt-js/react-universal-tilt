@@ -25,7 +25,7 @@ export default function ReactTilt({
   }, [callbacks, settings, tiltChange]);
 
   return (
-    <div {...props} className={className} ref={el}>
+    <div {...props} ref={el} className={className}>
       {children}
     </div>
   );
