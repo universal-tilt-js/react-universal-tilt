@@ -1,5 +1,16 @@
 # react-universal-tilt Changelog
 
+## 1.3.0 beta 2 / 1.3.0 (2019-03-23)
+#### Bug Fix
+- fixed `tiltChange` event bug
+
+## 1.3.0 beta 1 (2019-03-23)
+#### Internal
+- rewritten with React Hooks
+
+#### Breaking Changes
+- dropped support for React < 16.8.0
+
 ## 1.2.0 (2019-03-05)
 #### Repository Changes
 - updated dependencies

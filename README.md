@@ -29,9 +29,9 @@ import ReactTilt from 'react-universal-tilt';
 <ReactTilt
   settings={ /* settings */ }
   callbacks={ /* callbacks */ }
-  styles={ /* CSS styles */ }
   className={ /* class name(s) */ }
   tiltChange={ /* event output destination */ }
+  // other props for div tag e.g. style
 />
 ```
 
@@ -53,7 +53,6 @@ Name | Type | Default | Description | Available options
 -|-|-|-|-
 **settings** | object | `{}` | [Default universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings)
 **callbacks** | object | `{}` | [Default universal-tilt.js callbacks](https://github.com/JB1905/universal-tilt.js#callbacks) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#callbacks)
-**style** | object | `{}` | CSS styles for tilt element | CSS styles
 **className** | string | `tilt` | Tilt element class name | Name of tilt element
 
 ## Event
