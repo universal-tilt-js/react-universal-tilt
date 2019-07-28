@@ -1,5 +1,12 @@
 # react-universal-tilt Changelog
 
+## 1.3.1 (2019-07-28)
+#### Bug Fix
+- fixed `destroy` method error
+
+#### Repository Changes
+- added husky
+
 ## 1.3.0 beta 2 / 1.3.0 (2019-03-23)
 #### Bug Fix
 - fixed `tiltChange` event bug

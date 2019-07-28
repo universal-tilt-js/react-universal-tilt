@@ -1,4 +1,7 @@
 src
+stories
+storybook-static
+.storybook
 
 .babelrc
 .travis.yml
