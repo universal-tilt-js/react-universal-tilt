@@ -5,8 +5,8 @@
 
 #### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React component
 ## Demo
-**[Live - check website](https://jb1905.github.io/universal-tilt.js/)**<br>
-**[Playground - play with library in Storybook](https://jb1905.github.io/react-universal-tilt/)**
+**[Live – check website](https://jb1905.github.io/universal-tilt.js/)**<br>
+**[Playground – play with library in Storybook](https://jb1905.github.io/react-universal-tilt/)**
 
 ## How to Use
 First, install the library in your project by npm:
