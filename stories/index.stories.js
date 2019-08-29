@@ -6,7 +6,7 @@ import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 
 import ReactTilt from '../src';
 
-const stories = storiesOf('ReactUniversalTilt');
+const stories = storiesOf('ReactUniversalTilt', module);
 
 stories.addDecorator(withKnobs);
 
