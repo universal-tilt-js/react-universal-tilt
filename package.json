@@ -1,18 +1,19 @@
 {
   "name": "react-universal-tilt",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "universal-tilt.js implementation for React component",
   "author": "Jakub Biesiada",
   "license": "MIT",
   "main": "lib/react-universal-tilt.min.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "release": "rimraf lib/* && npm run prettier && npm run lint && npm run build:dev && npm run build",
     "build": "webpack --env build",
     "build:dev": "webpack --env dev",
     "watch": "npm run build -- --watch",
     "watch:dev": "npm run build:dev -- --watch",
-    "lint": "eslint src --fix",
-    "prettier": "prettier --write 'src/**/*.js'",
+    "lint": "eslint 'src/**/*.tsx' --fix",
+    "prettier": "prettier --write 'src/**/*.tsx'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
@@ -37,35 +38,33 @@
     "universal-tilt.js": "^2.0.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.5.5",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-knobs": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
     "@storybook/storybook-deployer": "^2.8.1",
-    "babel-eslint": "^10.0.2",
+    "@types/prop-types": "^15.7.2",
+    "@types/react": "^16.9.2",
+    "@typescript-eslint/parser": "^2.2.0",
     "babel-loader": "^8.0.6",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "eslint": "^6.2.1",
-    "eslint-config-prettier": "^6.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
-    "husky": "^3.0.4",
-    "lint-staged": "^9.2.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.9.0"
   },
   "husky": {
     "hooks": {
@@ -73,7 +72,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js}": [
+    "src/**/*.{tsx}": [
       "npm run prettier",
       "npm run lint",
       "git add"

@@ -3,7 +3,7 @@ stories
 storybook-static
 .storybook
 
-.babelrc
+tsconfig.json
 .travis.yml
 .prettierrc
 

@@ -1,5 +1,12 @@
 # react-universal-tilt Changelog
 
+## 1.4.0 (Soon)
+#### Dependencies
+- update universal-tilt.js to `^3.0.0`
+
+#### Internal
+- rewrite with TypeScript
+
 ## 1.3.1 (2019-07-28)
 #### Bug Fix
 - fixed `destroy` method error

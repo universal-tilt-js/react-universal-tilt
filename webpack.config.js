@@ -15,23 +15,24 @@ module.exports = env => {
 
   return {
     mode,
-    entry: `${__dirname}/src/index.js`,
+    entry: `${__dirname}/src/index.tsx`,
     externals: ['react', 'universal-tilt.js'],
     devtool,
     output: {
       path: `${__dirname}/lib`,
       filename: outputFile,
       library: 'ReactTilt',
-      libraryTarget: 'umd',
-      umdNamedDefine: true,
-      globalObject: 'global'
+      libraryTarget: 'commonjs2'
     },
     module: {
       rules: [
         {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          exclude: /node_modules/
+          test: /\.tsx$/,
+          loader: 'ts-loader',
+          exclude: /node_modules/,
+          resolve: {
+            extensions: ['.tsx']
+          }
         }
       ]
     }

@@ -1,6 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import UniversalTilt from 'universal-tilt.js';
+import { Options } from 'universal-tilt.js/lib/types';
+
+type Props = {
+  settings: object;
+  callbacks: object;
+  tiltChange: (e: CustomEvent) => any;
+  className: string;
+  children: ChildNode | ChildNode[];
+};
 
 export default function ReactTilt({
   settings,
@@ -9,19 +18,20 @@ export default function ReactTilt({
   className,
   children,
   ...props
-}) {
-  const el = useRef();
+}: Props) {
+  const el = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const current = el.current;
 
-    UniversalTilt.init({ elements: current, settings, callbacks });
+    UniversalTilt.init({ elements: current, settings, callbacks } as Options);
 
-    const output = e => tiltChange(e.detail);
+    const output = (e: CustomEvent) => tiltChange(e.detail);
 
-    if (tiltChange) current.addEventListener('tiltChange', output);
+    if (tiltChange)
+      current!.addEventListener('tiltChange', output as EventListener);
 
-    return () => current.universalTilt.destroy();
+    return () => current!.universalTilt.destroy();
   }, [callbacks, settings, tiltChange]);
 
   return (
