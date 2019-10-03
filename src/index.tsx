@@ -6,7 +6,7 @@ import { Options } from 'universal-tilt.js/lib/types';
 type Props = {
   settings: object;
   callbacks: object;
-  tiltChange: (e: CustomEvent) => any;
+  tiltChange: (e: CustomEvent) => void;
   className: string;
   children: ChildNode | ChildNode[];
 };
