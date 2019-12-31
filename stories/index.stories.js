@@ -2,7 +2,13 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import {
+  withKnobs,
+  text,
+  boolean,
+  number,
+  radios
+} from '@storybook/addon-knobs';
 
 import ReactTilt from '../src';
 
@@ -39,7 +45,7 @@ stories
       settings={{
         reset: boolean('Reset', true),
         reverse: boolean('Reverse', false),
-        scale: number('Set scale', 1.1)
+        scale: number('Set scale', 1.1, { min: 0 })
       }}
     />
   ))
@@ -51,7 +57,12 @@ stories
       }}
       settings={{
         shine: boolean('Add shine', true),
-        'shine-opacity': number('Opacity value', 0.5),
+        'shine-opacity': number('Opacity value', 0.5, {
+          min: 0,
+          max: 1,
+          step: 0.1,
+          range: true
+        }),
         'shine-save': boolean('Save shine effect', true),
         'shine-prerender': boolean('Prerender shine', false)
       }}
@@ -99,7 +110,7 @@ stories
       settings={{
         startX: number('Startup X value', 20),
         startY: number('Startup Y value', -20),
-        disabled: 'X'
+        disabled: radios('Disabled axis', { X: 'X', Y: 'Y' }, 'X')
       }}
     />
   ))
