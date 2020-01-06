@@ -6,7 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 export default {
-  input: ['src/index.tsx'],
+  input: 'src/index.tsx',
   output: [
     {
       file: pkg.main,
