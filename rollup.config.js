@@ -1,7 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
-import commonjs from '@rollup/plugin-commonjs';
 
 import pkg from './package.json';
 
@@ -10,17 +9,19 @@ export default {
   output: [
     {
       file: pkg.main,
+      format: 'cjs',
+      sourcemap: true
+    },
+    {
+      file: pkg.module,
       format: 'es',
       sourcemap: true
     }
   ],
-  external: ['universal-tilt.js', 'react', 'prop-types'],
-  plugins: [
-    resolve(),
-    typescript(),
-    terser(),
-    commonjs({
-      include: 'node_modules/**'
-    })
+  plugins: [resolve(), typescript(), terser()],
+  external: [
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies)
   ]
+  // external: ['universal-tilt.js', 'react', 'prop-types']
 };
