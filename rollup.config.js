@@ -23,5 +23,4 @@ export default {
     ...Object.keys(pkg.dependencies),
     ...Object.keys(pkg.peerDependencies)
   ]
-  // external: ['universal-tilt.js', 'react', 'prop-types']
 };
