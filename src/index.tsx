@@ -1,55 +1,45 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import UniversalTilt from 'universal-tilt.js';
-import { Options } from 'universal-tilt.js/lib/types';
+import { Settings, Callbacks } from 'universal-tilt.js/lib/types';
 
 type Props = {
-  settings: object;
-  callbacks: object;
-  tiltChange: (e: CustomEvent) => void;
-  className: string;
-  children: ChildNode | ChildNode[];
+  readonly settings: Settings;
+  readonly callbacks: Callbacks;
+  readonly tiltChange: (e: CustomEvent) => void;
+  readonly className: string;
 };
 
-export default function ReactTilt({
+const ReactTilt: React.FC<Props &
+  React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  >> = ({
   settings,
   callbacks,
   tiltChange,
-  className,
+  className = 'tilt',
   children,
   ...props
-}: Props) {
+}) => {
   const el = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const current = el.current;
 
-    UniversalTilt.init({ elements: current, settings, callbacks } as Options);
+    UniversalTilt.init({ elements: current, settings, callbacks });
 
-    const output = (e: CustomEvent) => tiltChange(e.detail);
+    const output: EventListener = (e: CustomEvent) => tiltChange(e.detail);
 
-    if (tiltChange)
-      current!.addEventListener('tiltChange', output as EventListener);
+    if (tiltChange) current.addEventListener('tiltChange', output);
 
-    return () => current!.universalTilt.destroy();
-  }, [callbacks, settings, tiltChange]);
+    return () => current.universalTilt.destroy();
+  }, [settings, callbacks, tiltChange]);
 
   return (
     <div {...props} ref={el} className={className}>
       {children}
     </div>
   );
-}
-
-ReactTilt.propTypes = {
-  settings: PropTypes.object,
-  callbacks: PropTypes.object,
-  tiltChange: PropTypes.func,
-  className: PropTypes.string,
-  children: PropTypes.node,
-  props: PropTypes.object
 };
 
-ReactTilt.defaultProps = {
-  className: 'tilt'
-};
+export default ReactTilt;

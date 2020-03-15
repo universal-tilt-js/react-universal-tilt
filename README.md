@@ -1,12 +1,12 @@
-# [react-universal-tilt](https://github.com/jb1905/react-universal-tilt)
+# [react-universal-tilt](https://github.com/universal-tilt-js/react-universal-tilt)
 
 [![NPM version](http://img.shields.io/npm/v/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 [![NPM downloads](http://img.shields.io/npm/dm/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 
 #### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React component
 ## Demo
-**[Live – check website](https://jb1905.github.io/universal-tilt.js/)**<br>
-**[Playground – play with library in Storybook](https://jb1905.github.io/react-universal-tilt/)**
+**[Live – check website](https://universal-tilt-js.github.io/universal-tilt.js/)**<br>
+**[Playground – play with library in Storybook](https://universal-tilt-js.github.io/react-universal-tilt/)**
 
 ## How to Use
 First, install the library in your project by npm:
@@ -52,8 +52,8 @@ You can add components with or without additional content:
 ## Props
 Name | Type | Default | Description | Available options
 -|-|-|-|-
-**settings** | object | `{}` | [Default universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#settings)
-**callbacks** | object | `{}` | [Default universal-tilt.js callbacks](https://github.com/JB1905/universal-tilt.js#callbacks) | [universal-tilt.js settings](https://github.com/JB1905/universal-tilt.js#callbacks)
+**settings** | object | `{}` | [Default universal-tilt.js settings](https://github.com/universal-tilt-js/universal-tilt.js#settings) | [universal-tilt.js settings](https://github.com/universal-tilt-js/universal-tilt.js#settings)
+**callbacks** | object | `{}` | [Default universal-tilt.js callbacks](https://github.com/universal-tilt-js/universal-tilt.js#callbacks) | [universal-tilt.js settings](https://github.com/universal-tilt-js/universal-tilt.js#callbacks)
 **className** | string | `tilt` | Tilt element class name | Name of tilt element
 
 ## Event
