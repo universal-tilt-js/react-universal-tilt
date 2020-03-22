@@ -5,7 +5,7 @@ import {
   text,
   boolean,
   number,
-  radios
+  radios,
 } from '@storybook/addon-knobs';
 
 import ReactTilt from '../lib/react-universal-tilt.esm';
@@ -15,34 +15,34 @@ const wrapperStyles = {
   minWidth: '100%',
   minHeight: 'calc(100vh - 16px)',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
 };
 
 export default {
   title: 'ReactTilt',
   component: ReactTilt,
   decorators: [
-    storyFn => <div style={wrapperStyles}>{storyFn()}</div>,
-    withKnobs
-  ]
+    (storyFn) => <div style={wrapperStyles}>{storyFn()}</div>,
+    withKnobs,
+  ],
 };
 
 const tiltStyles = {
   width: 300,
   height: 300,
-  borderRadius: 10
+  borderRadius: 10,
 };
 
 export const basic = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
-      background: 'linear-gradient(45deg, #3c3aad, #f7c340)'
+      background: 'linear-gradient(45deg, #3c3aad, #f7c340)',
     }}
     settings={{
       reset: boolean('Reset', true),
       reverse: boolean('Reverse', false),
-      scale: number('Set scale', 1.1, { min: 0 })
+      scale: number('Set scale', 1.1, { min: 0 }),
     }}
   />
 );
@@ -51,7 +51,7 @@ export const shine = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
-      background: 'linear-gradient(135deg, #a90329, #eb8415)'
+      background: 'linear-gradient(135deg, #a90329, #eb8415)',
     }}
     settings={{
       shine: boolean('Add shine', true),
@@ -59,10 +59,10 @@ export const shine = () => (
         min: 0,
         max: 1,
         step: 0.1,
-        range: true
+        range: true,
       }),
       'shine-save': boolean('Save shine effect', true),
-      'shine-prerender': boolean('Prerender shine', false)
+      'shine-prerender': boolean('Prerender shine', false),
     }}
   />
 );
@@ -75,7 +75,7 @@ export const parallax = () => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      transformStyle: 'preserve-3d'
+      transformStyle: 'preserve-3d',
     }}
   >
     <div
@@ -84,7 +84,7 @@ export const parallax = () => (
         height: 180,
         backgroundColor: '#fff',
         borderRadius: 10,
-        transform: 'translateZ(80px)'
+        transform: 'translateZ(80px)',
       }}
     ></div>
   </ReactTilt>
@@ -94,10 +94,10 @@ export const base = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
-      background: 'linear-gradient(135deg, #cb60b3, #a80077)'
+      background: 'linear-gradient(135deg, #cb60b3, #a80077)',
     }}
     settings={{
-      base: document.querySelector('#root')
+      base: document.querySelector('#root'),
     }}
   />
 );
@@ -106,12 +106,12 @@ export const startupValues = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
-      background: 'linear-gradient(45deg, #c5cf76, #49a5bf)'
+      background: 'linear-gradient(45deg, #c5cf76, #49a5bf)',
     }}
     settings={{
       startX: number('Startup X value', 20),
       startY: number('Startup Y value', -20),
-      disabled: radios('Disabled axis', { X: 'X', Y: 'Y' }, 'X')
+      disabled: radios('Disabled axis', { X: 'X', Y: 'Y' }, 'X'),
     }}
   />
 );
@@ -120,11 +120,11 @@ export const excludeUserAgents = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
-      background: 'linear-gradient(45deg, #f1e767, #feb645)'
+      background: 'linear-gradient(45deg, #f1e767, #feb645)',
     }}
     settings={{
       exclude: `/(${text('Exclule user agents', 'Firefox')})/`,
-      gyroscope: boolean('Gyroscope', false)
+      gyroscope: boolean('Gyroscope', false),
     }}
   />
 );
@@ -133,7 +133,7 @@ export const changeEvent = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
-      background: 'linear-gradient(338deg, #696bff, #8cffe6)'
+      background: 'linear-gradient(338deg, #696bff, #8cffe6)',
     }}
     tiltChange={action('tiltChange')}
   />

@@ -9,11 +9,13 @@ type Props = {
   readonly className: string;
 };
 
-const ReactTilt: React.FC<Props &
-  React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement
-  >> = ({
+const ReactTilt: React.FC<
+  Props &
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLDivElement>,
+      HTMLDivElement
+    >
+> = ({
   settings,
   callbacks,
   tiltChange,
