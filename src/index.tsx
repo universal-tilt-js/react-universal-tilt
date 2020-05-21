@@ -1,21 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, HTMLProps } from 'react';
 import UniversalTilt from 'universal-tilt.js';
 import { Settings, Callbacks } from 'universal-tilt.js/lib/types';
 
-type Props = {
-  readonly settings: Settings;
-  readonly callbacks: Callbacks;
-  readonly tiltChange: (e: CustomEvent) => void;
+interface Props extends HTMLProps<HTMLDivElement> {
+  readonly settings?: Settings;
+  readonly callbacks?: Callbacks;
+  readonly tiltChange?: (e: CustomEvent) => void;
   readonly className: string;
-};
+}
 
-const ReactTilt: React.FC<
-  Props &
-    React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLDivElement>,
-      HTMLDivElement
-    >
-> = ({
+const ReactTilt: React.FC<Props> = ({
   settings,
   callbacks,
   tiltChange,
