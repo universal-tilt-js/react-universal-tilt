@@ -30,8 +30,8 @@ import ReactTilt from 'react-universal-tilt';
 <ReactTilt
   settings={ /* settings */ }
   callbacks={ /* callbacks */ }
-  className={ /* class name(s) */ }
   tiltChange={ /* event output destination */ }
+  className={ /* class name(s) */ }
   // other props for div tag e.g. style
 />
 ```
