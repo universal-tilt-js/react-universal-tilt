@@ -6,7 +6,6 @@ interface Props extends HTMLProps<HTMLDivElement> {
   readonly settings?: Settings;
   readonly callbacks?: Callbacks;
   readonly tiltChange?: (e: CustomEvent) => void;
-  readonly className: string;
 }
 
 const ReactTilt: React.FC<Props> = ({
