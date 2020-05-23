@@ -8,7 +8,7 @@ import {
   radios,
 } from '@storybook/addon-knobs';
 
-import ReactTilt from '../lib/react-universal-tilt.esm';
+import ReactTilt from '../src';
 
 const wrapperStyles = {
   display: 'flex',

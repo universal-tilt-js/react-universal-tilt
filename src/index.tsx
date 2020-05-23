@@ -23,7 +23,7 @@ const ReactTilt: React.FC<Props> = ({
 
     UniversalTilt.init({ elements: current, settings, callbacks });
 
-    const output: EventListener = (e: CustomEvent) => tiltChange(e.detail);
+    const output = (e: Event) => tiltChange((e as CustomEvent).detail);
 
     if (tiltChange) current.addEventListener('tiltChange', output);
 
