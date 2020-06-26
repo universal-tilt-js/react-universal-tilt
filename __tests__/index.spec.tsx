@@ -11,7 +11,20 @@ describe('ReactUniversalTilt', () => {
   });
 
   it('should render component with custom props', () => {
-    const { container } = render(<ReactUniversalTilt />);
+    const { container } = render(
+      <ReactUniversalTilt
+        className="tilt-elem my-tilt"
+        settings={{
+          base: 'window',
+          reverse: true,
+        }}
+        style={{
+          border: '1px solid #333',
+        }}
+      >
+        <p>Hello World!</p>
+      </ReactUniversalTilt>
+    );
 
     expect(container).toMatchSnapshot();
   });
