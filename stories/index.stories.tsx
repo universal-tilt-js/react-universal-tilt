@@ -142,9 +142,9 @@ export const base: Story = () => (
 );
 
 interface StartupValuesProps {
- readonly startX: number;
- readonly startY: number;
- readonly disabled: 'X' | 'Y';
+  readonly startX: number;
+  readonly startY: number;
+  readonly disabled: 'X' | 'Y';
 }
 
 export const startupValues: Story<StartupValuesProps> = (args) => (
