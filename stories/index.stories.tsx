@@ -30,55 +30,80 @@ const tiltStyles = {
   borderRadius: 10,
 };
 
-export const basic: Story = ({}) => (
+interface BasicProps {
+  readonly reset: boolean;
+  readonly reverse: boolean;
+  readonly scale: number;
+}
+
+export const basic: Story<BasicProps> = (args) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #3c3aad, #f7c340)',
     }}
-    settings={
-      {
-        // reset: boolean('Reset', true),
-        // reverse: boolean('Reverse', false),
-        // scale: number('Set scale', 1.1, { min: 0 }),
-      }
-    }
+    settings={args}
   />
 );
+
+basic.argTypes = {
+  scale: {
+    control: {
+      type: 'number',
+      min: 0,
+    },
+  },
+};
 
 basic.args = {
   reset: true,
   reverse: false,
-  scale: 1.1, // TODO
+  scale: 1.1,
 };
 
-export const shine: Story = ({}) => (
+interface ShineProps {
+  readonly shine: boolean;
+  readonly opacity: number;
+  readonly save: boolean;
+  readonly prerender: boolean;
+}
+
+export const shine: Story<ShineProps> = ({
+  shine,
+  opacity,
+  save,
+  prerender,
+}) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(135deg, #a90329, #eb8415)',
     }}
-    settings={
-      {
-        // shine: boolean('Add shine', true),
-        // 'shine-opacity': number('Opacity value', 0.5, {
-        //   min: 0,
-        //   max: 1,
-        //   step: 0.1,
-        //   range: true,
-        // }),
-        // 'shine-save': boolean('Save shine effect', true),
-        // 'shine-prerender': boolean('Prerender shine', false),
-      }
-    }
+    settings={{
+      shine,
+      'shine-opacity': opacity,
+      'shine-save': save,
+      'shine-prerender': prerender,
+    }}
   />
 );
 
+shine.argTypes = {
+  opacity: {
+    control: {
+      type: 'range',
+      min: 0,
+      max: 1,
+      step: 0.1,
+    },
+  },
+};
+
 shine.args = {
   shine: true,
-  opacity: 0.5, // TODO
-  save: true, // TODO
-  prerender: false, // TODO
+  opacity: 0.5,
+  save: true,
+  prerender: false,
 };
 
 export const parallax: Story = () => (
@@ -100,7 +125,7 @@ export const parallax: Story = () => (
         borderRadius: 10,
         transform: 'translateZ(80px)',
       }}
-    ></div>
+    />
   </ReactTilt>
 );
 
@@ -116,40 +141,49 @@ export const base: Story = () => (
   />
 );
 
-export const startupValues: Story = ({}) => (
+interface StartupValuesProps {
+ readonly startX: number;
+ readonly startY: number;
+ readonly disabled: 'X' | 'Y';
+}
+
+export const startupValues: Story<StartupValuesProps> = (args) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #c5cf76, #49a5bf)',
     }}
-    settings={
-      {
-        // startX: number('Startup X value', 20),
-        // startY: number('Startup Y value', -20),
-        // disabled: radios('Disabled axis', { X: 'X', Y: 'Y' }, 'X'),
-      }
-    }
+    settings={args}
   />
 );
+
+startupValues.argTypes = {
+  disabled: {
+    control: {
+      type: 'radio',
+      options: ['X', 'Y'],
+    },
+  },
+};
 
 startupValues.args = {
   startX: 20,
   startY: -20,
-  disabled: 'X', // TODO
+  disabled: 'X',
 };
 
-export const excludeUserAgents: Story = ({}) => (
+interface ExcludeUserAgentsProps {
+  exclude: RegExp;
+  gyroscope: boolean;
+}
+
+export const excludeUserAgents: Story<ExcludeUserAgentsProps> = (args) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #f1e767, #feb645)',
     }}
-    settings={
-      {
-        // exclude: `/(${text('Exclule user agents', 'Firefox')})/`,
-        // gyroscope: boolean('Gyroscope', false),
-      }
-    }
+    settings={args}
   />
 );
 
