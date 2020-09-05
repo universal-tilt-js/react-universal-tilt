@@ -173,8 +173,8 @@ startupValues.args = {
 };
 
 interface ExcludeUserAgentsProps {
-  exclude: RegExp;
-  gyroscope: boolean;
+  readonly exclude: RegExp;
+  readonly gyroscope: boolean;
 }
 
 export const excludeUserAgents: Story<ExcludeUserAgentsProps> = (args) => (
