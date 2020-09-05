@@ -7,7 +7,9 @@
     "jsx": "react",
     "outDir": "lib",
     "strict": true,
+    "strictNullChecks": false,
     "moduleResolution": "node",
     "esModuleInterop": true
-  }
+  },
+  "include": ["src"]
 }
