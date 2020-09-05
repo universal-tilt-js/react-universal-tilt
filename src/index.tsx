@@ -25,9 +25,17 @@ const ReactTilt: React.FC<Props> = ({
 
     const output = (e: Event) => tiltChange((e as CustomEvent).detail);
 
-    if (tiltChange) current.addEventListener('tiltChange', output);
+    if (tiltChange) {
+      current.addEventListener('tiltChange', output);
+    }
 
-    return () => current.universalTilt.destroy();
+    return () => {
+      if (tiltChange) {
+        current.removeEventListener('tiltChange', output);
+      }
+
+      current.universalTilt.destroy();
+    };
   }, [settings, callbacks, tiltChange]);
 
   return (

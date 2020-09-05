@@ -1,7 +1,11 @@
 # [react-universal-tilt](https://github.com/universal-tilt-js/react-universal-tilt)
 
-[![NPM version](http://img.shields.io/npm/v/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
-[![NPM downloads](http://img.shields.io/npm/dm/react-universal-tilt.svg?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
+[![NPM version](http://img.shields.io/npm/v/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
+[![NPM downloads](http://img.shields.io/npm/dm/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
+[![NPM license](https://img.shields.io/npm/l/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
+[![Codecov](https://img.shields.io/codecov/c/github/universal-tilt-js/react-universal-tilt?style=flat-square)](https://codecov.io/gh/universal-tilt-js/react-universal-tilt)
+[![Travis](https://img.shields.io/travis/universal-tilt-js/react-universal-tilt/master?style=flat-square)](https://travis-ci.org/universal-tilt-js/react-universal-tilt)
+[![Bundle size](https://img.shields.io/bundlephobia/min/react-universal-tilt?style=flat-square)](https://bundlephobia.com/result?p=react-universal-tilt)
 
 #### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React component
 

@@ -1,18 +1,18 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import ReactUniversalTilt from '../src';
+import ReactTilt from '../src';
 
-describe('ReactUniversalTilt', () => {
+describe('ReactTilt', () => {
   it('should render component with default props', () => {
-    const { container } = render(<ReactUniversalTilt />);
+    const { container } = render(<ReactTilt />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should render component with custom props', () => {
     const { container } = render(
-      <ReactUniversalTilt
+      <ReactTilt
         className="tilt-elem my-tilt"
         settings={{
           base: 'window',
@@ -23,7 +23,7 @@ describe('ReactUniversalTilt', () => {
         }}
       >
         <p>Hello World!</p>
-      </ReactUniversalTilt>
+      </ReactTilt>
     );
 
     expect(container).toMatchSnapshot();

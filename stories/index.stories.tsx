@@ -1,19 +1,13 @@
 import React from 'react';
+import { Meta, Story } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  radios,
-} from '@storybook/addon-knobs';
 
 import ReactTilt from '../src';
 
 const wrapperStyles = {
   display: 'flex',
   minWidth: '100%',
-  minHeight: 'calc(100vh - 16px)',
+  minHeight: 'calc(100vh - 2rem)',
   alignItems: 'center',
   justifyContent: 'center',
 };
@@ -22,10 +16,13 @@ export default {
   title: 'ReactTilt',
   component: ReactTilt,
   decorators: [
-    (storyFn) => <div style={wrapperStyles}>{storyFn()}</div>,
-    withKnobs,
+    (Story) => (
+      <div style={wrapperStyles}>
+        <Story />
+      </div>
+    ),
   ],
-};
+} as Meta;
 
 const tiltStyles = {
   width: 300,
@@ -33,41 +30,58 @@ const tiltStyles = {
   borderRadius: 10,
 };
 
-export const basic = () => (
+export const basic: Story = ({}) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #3c3aad, #f7c340)',
     }}
-    settings={{
-      reset: boolean('Reset', true),
-      reverse: boolean('Reverse', false),
-      scale: number('Set scale', 1.1, { min: 0 }),
-    }}
+    settings={
+      {
+        // reset: boolean('Reset', true),
+        // reverse: boolean('Reverse', false),
+        // scale: number('Set scale', 1.1, { min: 0 }),
+      }
+    }
   />
 );
 
-export const shine = () => (
+basic.args = {
+  reset: true,
+  reverse: false,
+  scale: 1.1, // TODO
+};
+
+export const shine: Story = ({}) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(135deg, #a90329, #eb8415)',
     }}
-    settings={{
-      shine: boolean('Add shine', true),
-      'shine-opacity': number('Opacity value', 0.5, {
-        min: 0,
-        max: 1,
-        step: 0.1,
-        range: true,
-      }),
-      'shine-save': boolean('Save shine effect', true),
-      'shine-prerender': boolean('Prerender shine', false),
-    }}
+    settings={
+      {
+        // shine: boolean('Add shine', true),
+        // 'shine-opacity': number('Opacity value', 0.5, {
+        //   min: 0,
+        //   max: 1,
+        //   step: 0.1,
+        //   range: true,
+        // }),
+        // 'shine-save': boolean('Save shine effect', true),
+        // 'shine-prerender': boolean('Prerender shine', false),
+      }
+    }
   />
 );
 
-export const parallax = () => (
+shine.args = {
+  shine: true,
+  opacity: 0.5, // TODO
+  save: true, // TODO
+  prerender: false, // TODO
+};
+
+export const parallax: Story = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
@@ -90,7 +104,7 @@ export const parallax = () => (
   </ReactTilt>
 );
 
-export const base = () => (
+export const base: Story = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
@@ -102,34 +116,49 @@ export const base = () => (
   />
 );
 
-export const startupValues = () => (
+export const startupValues: Story = ({}) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #c5cf76, #49a5bf)',
     }}
-    settings={{
-      startX: number('Startup X value', 20),
-      startY: number('Startup Y value', -20),
-      disabled: radios('Disabled axis', { X: 'X', Y: 'Y' }, 'X'),
-    }}
+    settings={
+      {
+        // startX: number('Startup X value', 20),
+        // startY: number('Startup Y value', -20),
+        // disabled: radios('Disabled axis', { X: 'X', Y: 'Y' }, 'X'),
+      }
+    }
   />
 );
 
-export const excludeUserAgents = () => (
+startupValues.args = {
+  startX: 20,
+  startY: -20,
+  disabled: 'X', // TODO
+};
+
+export const excludeUserAgents: Story = ({}) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #f1e767, #feb645)',
     }}
-    settings={{
-      exclude: `/(${text('Exclule user agents', 'Firefox')})/`,
-      gyroscope: boolean('Gyroscope', false),
-    }}
+    settings={
+      {
+        // exclude: `/(${text('Exclule user agents', 'Firefox')})/`,
+        // gyroscope: boolean('Gyroscope', false),
+      }
+    }
   />
 );
 
-export const changeEvent = () => (
+excludeUserAgents.args = {
+  exclude: /(Firefox)/,
+  gyroscope: false,
+};
+
+export const changeEvent: Story = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
