@@ -27,12 +27,12 @@
     "url": "https://github.com/universal-tilt-js/react-universal-tilt.git"
   },
   "keywords": [
-    "react",
-    "component",
     "tilt",
+    "component",
     "parallax",
+    "gyroscope",
     "movement",
-    "gyroscope"
+    "react"
   ],
   "bugs": {
     "url": "https://github.com/universal-tilt-js/react-universal-tilt/issues"
