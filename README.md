@@ -7,12 +7,19 @@
 [![Travis](https://img.shields.io/travis/universal-tilt-js/react-universal-tilt/master?style=flat-square)](https://travis-ci.org/universal-tilt-js/react-universal-tilt)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-universal-tilt?style=flat-square)](https://bundlephobia.com/result?p=react-universal-tilt)
 
-#### [universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React component
 
-## Demo
+## About
+
+**[universal-tilt.js](https://www.npmjs.com/package/universal-tilt.js) implementation for React component**
+
+### Demo
 
 **[Live – check website](https://universal-tilt-js.github.io/universal-tilt.js/)**<br>
 **[Playground – play with library in Storybook](https://universal-tilt-js.github.io/react-universal-tilt/)**
+
+### Alternatives
+
+- [react-tilt](https://github.com/jonathandion/react-tilt) by [Jon](https://github.com/jonathandion)
 
 ## How to Use
 
@@ -53,7 +60,9 @@ You can add components with or without additional content:
 _with:_
 
 ```js
-<ReactTilt /* options */>// additional content</ReactTilt>
+<ReactTilt /* options */>
+  {/* additional content */}
+</ReactTilt>
 ```
 
 _without:_
