@@ -7,8 +7,6 @@ import ReactTilt from '../src';
 const wrapperStyles = {
   display: 'flex',
   minWidth: '100%',
-  // minHeight: 'calc(100vh - 2rem)',
-  // minHeight: '100%',
   minHeight: '100vh',
   alignItems: 'center',
   justifyContent: 'center',
