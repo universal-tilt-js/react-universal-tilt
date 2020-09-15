@@ -173,22 +173,28 @@ startupValues.args = {
 };
 
 interface ExcludeUserAgentsProps {
-  readonly exclude: RegExp;
+  readonly exclude: string;
   readonly gyroscope: boolean;
 }
 
-export const excludeUserAgents: Story<ExcludeUserAgentsProps> = (args) => (
+export const excludeUserAgents: Story<ExcludeUserAgentsProps> = ({
+  exclude,
+  ...args
+}) => (
   <ReactTilt
     style={{
       ...tiltStyles,
       background: 'linear-gradient(45deg, #f1e767, #feb645)',
     }}
-    settings={args}
+    settings={{
+      ...args,
+      exclude: new RegExp(exclude),
+    }}
   />
 );
 
 excludeUserAgents.args = {
-  exclude: /(Firefox)/,
+  exclude: 'Firefox',
   gyroscope: false,
 };
 
