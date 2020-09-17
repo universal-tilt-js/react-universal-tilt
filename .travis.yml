@@ -17,14 +17,13 @@ jobs:
     - stage: release
       node_js: lts/*
       deploy:
-        provider: script
-        skip_cleanup: true
-        script: yarn semantic-release
+        - provider: script
+          skip_cleanup: true
+          script: yarn semantic-release
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: storybook-static
-  on:
-    branch: master
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          local_dir: storybook-static
+          on:
+            branch: master
