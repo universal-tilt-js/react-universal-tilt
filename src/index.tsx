@@ -5,17 +5,17 @@ import { Settings, Callbacks } from 'universal-tilt.js/lib/types';
 interface Props extends HTMLProps<HTMLDivElement> {
   readonly settings?: Settings;
   readonly callbacks?: Callbacks;
-  readonly tiltChange?: (e: CustomEvent) => void;
+  tiltChange?: (e: CustomEvent) => void;
 }
 
-const ReactTilt: React.FC<Props> = ({
+const ReactTilt = ({
   settings,
   callbacks,
   tiltChange,
   className = 'tilt',
   children,
   ...props
-}) => {
+}: Props) => {
   const el = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

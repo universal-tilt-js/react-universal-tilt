@@ -36,7 +36,7 @@ interface BasicProps {
   readonly scale: number;
 }
 
-export const basic: Story<BasicProps> = (args) => (
+export const Basic: Story<BasicProps> = (args) => (
   <ReactTilt
     style={{
       ...tiltStyles,
@@ -46,7 +46,7 @@ export const basic: Story<BasicProps> = (args) => (
   />
 );
 
-basic.argTypes = {
+Basic.argTypes = {
   scale: {
     control: {
       type: 'number',
@@ -55,7 +55,7 @@ basic.argTypes = {
   },
 };
 
-basic.args = {
+Basic.args = {
   reset: true,
   reverse: false,
   scale: 1.1,
@@ -68,7 +68,7 @@ interface ShineProps {
   readonly prerender: boolean;
 }
 
-export const shine: Story<ShineProps> = ({
+export const Shine: Story<ShineProps> = ({
   shine,
   opacity,
   save,
@@ -88,7 +88,7 @@ export const shine: Story<ShineProps> = ({
   />
 );
 
-shine.argTypes = {
+Shine.argTypes = {
   opacity: {
     control: {
       type: 'range',
@@ -99,14 +99,14 @@ shine.argTypes = {
   },
 };
 
-shine.args = {
+Shine.args = {
   shine: true,
   opacity: 0.5,
   save: true,
   prerender: false,
 };
 
-export const parallax: Story = () => (
+export const Parallax: Story = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
@@ -129,7 +129,7 @@ export const parallax: Story = () => (
   </ReactTilt>
 );
 
-export const base: Story = () => (
+export const Base: Story = () => (
   <ReactTilt
     style={{
       ...tiltStyles,
@@ -147,7 +147,7 @@ interface StartupValuesProps {
   readonly disabled: 'X' | 'Y';
 }
 
-export const startupValues: Story<StartupValuesProps> = (args) => (
+export const StartupValues: Story<StartupValuesProps> = (args) => (
   <ReactTilt
     style={{
       ...tiltStyles,
@@ -157,7 +157,7 @@ export const startupValues: Story<StartupValuesProps> = (args) => (
   />
 );
 
-startupValues.argTypes = {
+StartupValues.argTypes = {
   disabled: {
     control: {
       type: 'radio',
@@ -166,7 +166,7 @@ startupValues.argTypes = {
   },
 };
 
-startupValues.args = {
+StartupValues.args = {
   startX: 20,
   startY: -20,
   disabled: 'X',
@@ -177,7 +177,7 @@ interface ExcludeUserAgentsProps {
   readonly gyroscope: boolean;
 }
 
-export const excludeUserAgents: Story<ExcludeUserAgentsProps> = ({
+export const ExcludeUserAgents: Story<ExcludeUserAgentsProps> = ({
   exclude,
   ...args
 }) => (
@@ -193,12 +193,12 @@ export const excludeUserAgents: Story<ExcludeUserAgentsProps> = ({
   />
 );
 
-excludeUserAgents.args = {
+ExcludeUserAgents.args = {
   exclude: 'Firefox',
   gyroscope: false,
 };
 
-export const changeEvent: Story = () => (
+export const ChangeEvent: Story = () => (
   <ReactTilt
     style={{
       ...tiltStyles,

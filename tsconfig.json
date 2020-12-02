@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "ES5",
+    "module": "ESNext",
     "checkJs": false,
     "declaration": true,
     "jsx": "react",
     "outDir": "lib",
     "strict": true,
     "strictNullChecks": false,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "esModuleInterop": true
   },
   "include": ["src"]
