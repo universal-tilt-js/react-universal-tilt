@@ -204,6 +204,6 @@ export const ChangeEvent: Story = () => (
       ...tiltStyles,
       background: 'linear-gradient(338deg, #696bff, #8cffe6)',
     }}
-    tiltChange={action('tiltChange')}
+    onTiltChange={action('tiltChange')}
   />
 );

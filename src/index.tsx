@@ -5,13 +5,13 @@ import { Settings, Callbacks } from 'universal-tilt.js/lib/types';
 interface Props extends HTMLProps<HTMLDivElement> {
   readonly settings?: Settings;
   readonly callbacks?: Callbacks;
-  tiltChange?: (e: CustomEvent) => void;
+  readonly onTiltChange?: (e: CustomEvent) => void;
 }
 
 const ReactTilt = ({
   settings,
   callbacks,
-  tiltChange,
+  onTiltChange,
   className = 'tilt',
   children,
   ...props
@@ -23,20 +23,20 @@ const ReactTilt = ({
 
     UniversalTilt.init({ elements: current, settings, callbacks });
 
-    const output = (e: Event) => tiltChange((e as CustomEvent).detail);
+    const output = (e: Event) => onTiltChange((e as CustomEvent).detail);
 
-    if (tiltChange) {
+    if (onTiltChange) {
       current.addEventListener('tiltChange', output);
     }
 
     return () => {
-      if (tiltChange) {
+      if (onTiltChange) {
         current.removeEventListener('tiltChange', output);
       }
 
       current.universalTilt.destroy();
     };
-  }, [settings, callbacks, tiltChange]);
+  }, [settings, callbacks, onTiltChange]);
 
   return (
     <div {...props} ref={el} className={className}>
