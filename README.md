@@ -81,7 +81,7 @@ _without:_
 
 ## Event
 
-`onTiltChange` event will output the x, y & angle of tilting
+`onTiltChange` event callback will output the x, y & angle of tilting
 
 ## Examples
 
