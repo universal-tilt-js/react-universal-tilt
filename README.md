@@ -4,7 +4,7 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 [![NPM license](https://img.shields.io/npm/l/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 [![Codecov](https://img.shields.io/codecov/c/github/universal-tilt-js/react-universal-tilt?style=flat-square)](https://codecov.io/gh/universal-tilt-js/react-universal-tilt)
-[![Travis](https://img.shields.io/travis/universal-tilt-js/react-universal-tilt/main?style=flat-square)](https://travis-ci.org/universal-tilt-js/react-universal-tilt)
+[![Travis](https://img.shields.io/travis/com/universal-tilt-js/react-universal-tilt/main?style=flat-square)](https://travis-ci.com/universal-tilt-js/react-universal-tilt)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-universal-tilt?style=flat-square)](https://bundlephobia.com/result?p=react-universal-tilt)
 
 
