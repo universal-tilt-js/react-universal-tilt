@@ -20,6 +20,7 @@
 ### Alternatives
 
 - [react-tilt](https://github.com/jonathandion/react-tilt) by [Jon](https://github.com/jonathandion)
+- [react-tilty](https://github.com/jonahallibone/react-tilty) by [Jonah](https://github.com/jonahallibone)
 
 ## How to Use
 
