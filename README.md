@@ -4,9 +4,8 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 [![NPM license](https://img.shields.io/npm/l/react-universal-tilt?style=flat-square)](https://www.npmjs.com/package/react-universal-tilt)
 [![Codecov](https://img.shields.io/codecov/c/github/universal-tilt-js/react-universal-tilt?style=flat-square)](https://codecov.io/gh/universal-tilt-js/react-universal-tilt)
-[![Travis](https://img.shields.io/travis/com/universal-tilt-js/react-universal-tilt/main?style=flat-square)](https://travis-ci.com/universal-tilt-js/react-universal-tilt)
+[![Travis](https://img.shields.io/travis/com/universal-tilt-js/react-universal-tilt/main?style=flat-square)](https://app.travis-ci.com/github/universal-tilt-js/react-universal-tilt)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-universal-tilt?style=flat-square)](https://bundlephobia.com/result?p=react-universal-tilt)
-
 
 ## About
 
@@ -14,8 +13,8 @@
 
 ### Demo
 
-**[Live – check website](https://universal-tilt-js.github.io/universal-tilt.js/)**<br>
-**[Playground – play with library in Storybook](https://universal-tilt-js.github.io/react-universal-tilt/)**
+**[Live – check the website](https://universal-tilt-js.github.io/universal-tilt.js/)**<br>
+**[Playground – play with the library in Storybook](https://universal-tilt-js.github.io/react-universal-tilt/)**
 
 ### Alternatives
 
@@ -38,13 +37,13 @@ $ yarn add react-universal-tilt
 
 ## Getting Started
 
-**• Import plugin in React application file:**
+**• Import plugin in the React application file:**
 
 ```js
 import ReactTilt from 'react-universal-tilt';
 ```
 
-**• Later create parallax component and pass options:**
+**• Later, create a parallax component and pass options:**
 
 ```js
 <ReactTilt
@@ -78,7 +77,7 @@ _without:_
 | ------------- | ------ | ------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | **settings**  | object | `{}`    | [Default universal-tilt.js settings](https://github.com/universal-tilt-js/universal-tilt.js#settings)   | [universal-tilt.js settings](https://github.com/universal-tilt-js/universal-tilt.js#settings)  |
 | **callbacks** | object | `{}`    | [Default universal-tilt.js callbacks](https://github.com/universal-tilt-js/universal-tilt.js#callbacks) | [universal-tilt.js settings](https://github.com/universal-tilt-js/universal-tilt.js#callbacks) |
-| **className** | string | `tilt`  | Tilt element class name                                                                                 | Name of tilt element                                                                           |
+| **className** | string | `tilt`  | Tilt element class name                                                                                 | Name of the tilt element                                                                           |
 
 ## Event
 
