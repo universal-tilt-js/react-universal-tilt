@@ -16,30 +16,30 @@ const ReactTilt = ({
   children,
   ...props
 }: Props) => {
-  const el = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const current = el.current;
+    const elements = ref.current;
 
-    UniversalTilt.init({ elements: current, settings, callbacks });
+    UniversalTilt.init({ elements, settings, callbacks });
 
     const output = (e: Event) => onTiltChange((e as CustomEvent).detail);
 
     if (onTiltChange) {
-      current.addEventListener('tiltChange', output);
+      elements.addEventListener('tiltChange', output);
     }
 
     return () => {
       if (onTiltChange) {
-        current.removeEventListener('tiltChange', output);
+        elements.removeEventListener('tiltChange', output);
       }
 
-      current.universalTilt.destroy();
+      elements.universalTilt.destroy();
     };
   }, [settings, callbacks, onTiltChange]);
 
   return (
-    <div {...props} ref={el} className={className}>
+    <div {...props} ref={ref} className={className}>
       {children}
     </div>
   );
